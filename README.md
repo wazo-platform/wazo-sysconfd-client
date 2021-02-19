@@ -8,6 +8,9 @@ Usage:
 from wazo_sysconfd import Client
 
 c = Client('localhost', prefix=None, version=None, https=False)
+
+# Update dhcp configuration
+status = c.dhcpd_update()
 ```
 
 ## How to implement a new command
