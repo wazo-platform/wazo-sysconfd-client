@@ -16,6 +16,7 @@ setup(
     entry_points={
         'wazo_sysconfd_client.commands': [
             'dhcpd_update = wazo_sysconfd_client.commands.dhcpd_update:DhcpdUpdateCommand',
+            'delete_voicemail = wazo_sysconfd_client.commands.delete_voicemail:DeleteVoicemailCommand',
         ]
     },
 )
