@@ -13,8 +13,5 @@ setup(
     author_email='dev@wazo.community',
     url='http://wazo.community',
     packages=find_packages(),
-    entry_points={
-        'wazo_sysconfd_client.commands': [
-        ]
-    },
+    entry_points={'wazo_sysconfd_client.commands': []},
 )
