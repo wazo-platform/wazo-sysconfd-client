@@ -21,6 +21,7 @@ setup(
             'commonconf_generate = wazo_sysconfd_client.commands.commonconf:CommonConfGenerateCommand',
             'exec_request_handlers = wazo_sysconfd_client.commands.exec_request_handlers:ExecRequestHandlersCommand',
             'hosts = wazo_sysconfd_client.commands.hosts:HostsCommand',
+            'resolv_conf = wazo_sysconfd_client.commands.resolv_conf:ResolvConfCommand',
         ]
     },
 )

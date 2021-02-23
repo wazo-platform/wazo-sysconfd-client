@@ -35,6 +35,13 @@ body = {
     'domain': 'example.com',
 }
 c.hosts(body)
+
+# Update resolv.conf
+body = {
+    'nameservers': ['192.168.0.1', '192.168.0.2'],
+    'search': ['wazo.example.com', 'wazo.example.org'],
+}
+c.resolv_conf(body)
 ```
 
 ## How to implement a new command
