@@ -28,6 +28,13 @@ body = {
     'chown_autoprov_config': [],
 }
 c.exec_request_handlers(body)
+
+# Update hostname and hosts file
+body = {
+    'hostname': 'wazo',
+    'domain': 'example.com',
+}
+c.hosts(body)
 ```
 
 ## How to implement a new command
