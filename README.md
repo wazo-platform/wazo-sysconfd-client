@@ -10,16 +10,24 @@ from wazo_sysconfd import Client
 c = Client('localhost', prefix=None, version=None, https=False)
 
 # Update dhcp configuration
-status = c.dhcpd_update()
+c.dhcpd_update()
 
 # Delete voicemail
-status = c.delete_voicemail()
+c.delete_voicemail()
 
 # Generate common config
-status = c.commonconf_generate()
+c.commonconf_generate()
 
 # Apply common config
-status = c.commonconf_apply()
+c.commonconf_apply()
+
+# Exec request handlers (Asterisk, wazo-agentd, wazo-provd configuration)
+body = {
+    'ipbx': ['module reload something'],
+    'agentbus': ['agent.edit.12'],
+    'chown_autoprov_config': [],
+}
+c.exec_request_handlers(body)
 ```
 
 ## How to implement a new command
