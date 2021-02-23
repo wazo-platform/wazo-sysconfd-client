@@ -14,6 +14,12 @@ status = c.dhcpd_update()
 
 # Delete voicemail
 status = c.delete_voicemail()
+
+# Generate common config
+status = c.commonconf_generate()
+
+# Apply common config
+status = c.commonconf_apply()
 ```
 
 ## How to implement a new command
