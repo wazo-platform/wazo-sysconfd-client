@@ -12,6 +12,9 @@ c = Client('localhost', prefix=None, version=None, https=False)
 # Update dhcp configuration
 c.dhcpd_update()
 
+# Move voicemail
+c.move_voicemail()
+
 # Delete voicemail
 c.delete_voicemail()
 
