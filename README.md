@@ -63,6 +63,12 @@ c.services(body)
 
 # Check sysconfd status
 status = c.status_check()
+
+# Manage Wazo services
+body = {
+    'wazo-service': 'start',
+}
+c.xivoctl(body)
 ```
 
 ## How to implement a new command

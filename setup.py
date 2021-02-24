@@ -25,6 +25,7 @@ setup(
             'ha_config = wazo_sysconfd_client.commands.ha_config:HAConfigCommand',
             'services = wazo_sysconfd_client.commands.services:ServicesCommand',
             'status_check = wazo_sysconfd_client.commands.status_check:StatusCheckCommand',
+            'xivoctl = wazo_sysconfd_client.commands.xivoctl:XivoCtlCommand',
         ]
     },
 )
