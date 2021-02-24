@@ -52,6 +52,14 @@ body = {
     'remote_address': '192.168.99.99'
 }
 c.ha_config.update(body)
+
+# Manage services
+body = {
+    'wazo-auth': 'start'
+    'networking': 'restart'
+    'wazo-confd': 'stop'
+}
+c.services(body)
 ```
 
 ## How to implement a new command

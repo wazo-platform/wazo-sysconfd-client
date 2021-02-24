@@ -23,6 +23,7 @@ setup(
             'hosts = wazo_sysconfd_client.commands.hosts:HostsCommand',
             'resolv_conf = wazo_sysconfd_client.commands.resolv_conf:ResolvConfCommand',
             'ha_config = wazo_sysconfd_client.commands.ha_config:HAConfigCommand',
+            'services = wazo_sysconfd_client.commands.services:ServicesCommand',
         ]
     },
 )
