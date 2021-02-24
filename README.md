@@ -60,6 +60,9 @@ body = {
     'wazo-confd': 'stop'
 }
 c.services(body)
+
+# Check sysconfd status
+status = c.status_check()
 ```
 
 ## How to implement a new command
