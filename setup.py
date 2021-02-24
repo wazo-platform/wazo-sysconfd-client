@@ -15,14 +15,14 @@ setup(
     packages=find_packages(),
     entry_points={
         'wazo_sysconfd_client.commands': [
-            'dhcpd_update = wazo_sysconfd_client.commands.dhcpd_update:DhcpdUpdateCommand',
-            'delete_voicemail = wazo_sysconfd_client.commands.delete_voicemail:DeleteVoicemailCommand',
             'commonconf_apply = wazo_sysconfd_client.commands.commonconf:CommonConfApplyCommand',
             'commonconf_generate = wazo_sysconfd_client.commands.commonconf:CommonConfGenerateCommand',
+            'delete_voicemail = wazo_sysconfd_client.commands.delete_voicemail:DeleteVoicemailCommand',
+            'dhcpd_update = wazo_sysconfd_client.commands.dhcpd_update:DhcpdUpdateCommand',
             'exec_request_handlers = wazo_sysconfd_client.commands.exec_request_handlers:ExecRequestHandlersCommand',
+            'ha_config = wazo_sysconfd_client.commands.ha_config:HAConfigCommand',
             'hosts = wazo_sysconfd_client.commands.hosts:HostsCommand',
             'resolv_conf = wazo_sysconfd_client.commands.resolv_conf:ResolvConfCommand',
-            'ha_config = wazo_sysconfd_client.commands.ha_config:HAConfigCommand',
             'services = wazo_sysconfd_client.commands.services:ServicesCommand',
             'status_check = wazo_sysconfd_client.commands.status_check:StatusCheckCommand',
             'xivoctl = wazo_sysconfd_client.commands.xivoctl:XivoCtlCommand',
