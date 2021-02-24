@@ -42,6 +42,16 @@ body = {
     'search': ['wazo.example.com', 'wazo.example.org'],
 }
 c.resolv_conf(body)
+
+# Get HA config
+config = c.ha_config.get(body)
+
+# Update HA config
+body = {
+    'node_type': 'master',
+    'remote_address': '192.168.99.99'
+}
+c.ha_config.update(body)
 ```
 
 ## How to implement a new command

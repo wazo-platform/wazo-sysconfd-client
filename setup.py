@@ -22,6 +22,7 @@ setup(
             'exec_request_handlers = wazo_sysconfd_client.commands.exec_request_handlers:ExecRequestHandlersCommand',
             'hosts = wazo_sysconfd_client.commands.hosts:HostsCommand',
             'resolv_conf = wazo_sysconfd_client.commands.resolv_conf:ResolvConfCommand',
+            'ha_config = wazo_sysconfd_client.commands.ha_config:HAConfigCommand',
         ]
     },
 )
