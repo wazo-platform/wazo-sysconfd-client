@@ -27,7 +27,6 @@ c.commonconf_apply()
 # Exec request handlers (Asterisk, wazo-agentd, wazo-provd configuration)
 body = {
     'ipbx': ['module reload something'],
-    'agentbus': ['agent.edit.12'],
     'chown_autoprov_config': [],
 }
 c.exec_request_handlers(body)
