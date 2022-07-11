@@ -6,7 +6,7 @@ from ..command import SysconfdCommand
 
 class ServicesCommand(SysconfdCommand):
 
-    resource = 'services'
+    resource = 'systemd_services'
     headers = {'Accept': 'application/json'}
 
     def __call__(self, body):

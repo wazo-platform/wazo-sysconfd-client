@@ -24,7 +24,7 @@ setup(
             'hosts = wazo_sysconfd_client.commands.hosts:HostsCommand',
             'move_voicemail = wazo_sysconfd_client.commands.voicemail:MoveVoicemailCommand',
             'resolv_conf = wazo_sysconfd_client.commands.resolv_conf:ResolvConfCommand',
-            'services = wazo_sysconfd_client.commands.services:ServicesCommand',
+            'systemd_services = wazo_sysconfd_client.commands.systemd_services:ServicesCommand',
             'status = wazo_sysconfd_client.commands.status:StatusCommand',
             'xivoctl = wazo_sysconfd_client.commands.xivoctl:XivoCtlCommand',
         ]
