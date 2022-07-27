@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# Copyright 2021 The Wazo Authors  (see the AUTHORS file)
+# Copyright 2021-2022 The Wazo Authors  (see the AUTHORS file)
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from setuptools import setup, find_packages
@@ -25,7 +25,7 @@ setup(
             'move_voicemail = wazo_sysconfd_client.commands.voicemail:MoveVoicemailCommand',
             'resolv_conf = wazo_sysconfd_client.commands.resolv_conf:ResolvConfCommand',
             'services = wazo_sysconfd_client.commands.services:ServicesCommand',
-            'status_check = wazo_sysconfd_client.commands.status_check:StatusCheckCommand',
+            'status = wazo_sysconfd_client.commands.status:StatusCommand',
             'xivoctl = wazo_sysconfd_client.commands.xivoctl:XivoCtlCommand',
         ]
     },
