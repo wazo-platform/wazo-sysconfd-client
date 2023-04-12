@@ -1,11 +1,10 @@
-# Copyright 2021 The Wazo Authors  (see the AUTHORS file)
+# Copyright 2021-2023 The Wazo Authors  (see the AUTHORS file)
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from ..command import SysconfdCommand
 
 
 class DeleteVoicemailCommand(SysconfdCommand):
-
     resource = 'delete_voicemail'
     headers = {'Accept': 'application/json'}
 
@@ -22,7 +21,6 @@ class DeleteVoicemailCommand(SysconfdCommand):
 
 
 class MoveVoicemailCommand(SysconfdCommand):
-
     resource = 'move_voicemail'
     headers = {'Accept': 'application/json'}
 
