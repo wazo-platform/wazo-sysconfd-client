@@ -4,12 +4,12 @@
 from ..command import SysconfdCommand
 
 
-class DhcpdUpdateCommand(SysconfdCommand):
-    resource = 'dhcpd_update'
+class DhcpdCommand(SysconfdCommand):
+    resource = 'dhcpd'
     headers = {'Accept': 'application/json'}
 
-    def __call__(self):
-        r = self.session.get(self.base_url, headers=self.headers)
+    def update(self):
+        r = self.session.put(self.base_url, headers=self.headers)
 
         if r.status_code != 200:
             self.raise_from_response(r)

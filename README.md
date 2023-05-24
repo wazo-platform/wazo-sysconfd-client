@@ -10,19 +10,19 @@ from wazo_sysconfd import Client
 c = Client('localhost', prefix=None, version=None, https=False)
 
 # Update dhcp configuration
-c.dhcpd_update()
+c.dhcpd.update()
 
 # Move voicemail
-c.move_voicemail()
+c.voicemail.move()
 
 # Delete voicemail
-c.delete_voicemail()
+c.voicemail.delete()
 
 # Generate common config
-c.commonconf_generate()
+c.commonconf.generate()
 
 # Apply common config
-c.commonconf_apply()
+c.commonconf.apply()
 
 # Exec request handlers (Asterisk, wazo-agentd, wazo-provd configuration)
 body = {
@@ -36,24 +36,24 @@ body = {
     'hostname': 'wazo',
     'domain': 'example.com',
 }
-c.hosts(body)
+c.hosts.update(body)
 
 # Update resolv.conf
 body = {
     'nameservers': ['192.168.0.1', '192.168.0.2'],
     'search': ['wazo.example.com', 'wazo.example.org'],
 }
-c.resolv_conf(body)
+c.resolv_conf.update(body)
 
 # Get HA config
-config = c.ha_config.get(body)
+config = c.ha.get(body)
 
 # Update HA config
 body = {
     'node_type': 'master',
     'remote_address': '192.168.99.99'
 }
-c.ha_config.update(body)
+c.ha.update(body)
 
 # Manage services
 body = {
@@ -70,7 +70,7 @@ status = c.status_check()
 body = {
     'wazo-service': 'start',
 }
-c.xivoctl(body)
+c.wazoctl(body)
 ```
 
 ## How to implement a new command

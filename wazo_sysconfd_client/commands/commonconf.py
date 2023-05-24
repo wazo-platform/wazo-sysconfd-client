@@ -4,11 +4,11 @@
 from ..command import SysconfdCommand
 
 
-class CommonConfApplyCommand(SysconfdCommand):
-    resource = 'commonconf_apply'
+class CommonConfCommand(SysconfdCommand):
+    resource = 'commonconf'
     headers = {'Accept': 'application/json'}
 
-    def __call__(self):
+    def apply(self):
         r = self.session.get(self.base_url, headers=self.headers)
 
         if r.status_code != 200:
@@ -16,14 +16,8 @@ class CommonConfApplyCommand(SysconfdCommand):
 
         return r.json()
 
-
-class CommonConfGenerateCommand(SysconfdCommand):
-    resource = 'commonconf_generate'
-    headers = {'Accept': 'application/json'}
-
-    def __call__(self):
-        r = self.session.post(self.base_url, headers=self.headers, json={})
-
+    def generate(self):
+        r = self.session.put(self.base_url, headers=self.headers, json={})
         if r.status_code != 200:
             self.raise_from_response(r)
 

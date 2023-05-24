@@ -4,34 +4,29 @@
 from ..command import SysconfdCommand
 
 
-class DeleteVoicemailCommand(SysconfdCommand):
-    resource = 'delete_voicemail'
+class VoicemailCommand(SysconfdCommand):
+    resource = 'voicemail'
     headers = {'Accept': 'application/json'}
 
-    def __call__(self, mailbox, context=None):
+    def delete(self, mailbox, context=None):
         params = {'mailbox': mailbox}
         if context:
             params['context'] = context
-        r = self.session.get(self.base_url, headers=self.headers, params=params)
+        r = self.session.delete(self.base_url, headers=self.headers, params=params)
 
         if r.status_code != 200:
             self.raise_from_response(r)
 
         return r.json()
 
-
-class MoveVoicemailCommand(SysconfdCommand):
-    resource = 'move_voicemail'
-    headers = {'Accept': 'application/json'}
-
-    def __call__(self, old_mailbox, old_context, new_mailbox, new_context):
+    def move(self, old_mailbox, old_context, new_mailbox, new_context):
         params = {
             'old_mailbox': old_mailbox,
             'old_context': old_context,
             'new_mailbox': new_mailbox,
             'new_context': new_context,
         }
-        r = self.session.get(self.base_url, headers=self.headers, params=params)
+        r = self.session.put(self.base_url, headers=self.headers, params=params)
 
         if r.status_code != 200:
             self.raise_from_response(r)
