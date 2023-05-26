@@ -9,9 +9,7 @@ class HAConfigCommand(SysconfdCommand):
     headers = {'Accept': 'application/json'}
 
     def update(self, body):
-        r = self.session.put(
-            self._client.url('ha'), headers=self.headers, json=body
-        )
+        r = self.session.put(self._client.url('ha'), headers=self.headers, json=body)
 
         if r.status_code != 200:
             self.raise_from_response(r)

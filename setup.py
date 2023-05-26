@@ -17,7 +17,7 @@ setup(
             'commonconf = wazo_sysconfd_client.commands.commonconf:CommonConfCommand',
             'dhcpd = wazo_sysconfd_client.commands.dhcpd:DhcpdCommand',
             'exec_request_handlers = wazo_sysconfd_client.commands.exec_request_handlers:ExecRequestHandlersCommand',
-            'ha = wazo_sysconfd_client.commands.ha_config:HAConfigCommand',
+            'ha = wazo_sysconfd_client.commands.ha:HAConfigCommand',
             'hosts = wazo_sysconfd_client.commands.hosts:HostsCommand',
             'voicemail = wazo_sysconfd_client.commands.voicemail:VoicemailCommand',
             'resolv_conf = wazo_sysconfd_client.commands.resolv_conf:ResolvConfCommand',
