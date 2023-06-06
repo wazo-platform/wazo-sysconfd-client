@@ -19,10 +19,10 @@ setup(
             'exec_request_handlers = wazo_sysconfd_client.commands.exec_request_handlers:ExecRequestHandlersCommand',
             'ha = wazo_sysconfd_client.commands.ha:HAConfigCommand',
             'hosts = wazo_sysconfd_client.commands.hosts:HostsCommand',
-            'voicemail = wazo_sysconfd_client.commands.voicemail:VoicemailCommand',
             'resolv_conf = wazo_sysconfd_client.commands.resolv_conf:ResolvConfCommand',
             'services = wazo_sysconfd_client.commands.services:ServicesCommand',
             'status = wazo_sysconfd_client.commands.status:StatusCommand',
+            'voicemail = wazo_sysconfd_client.commands.voicemail:VoicemailCommand',
             'wazoctl = wazo_sysconfd_client.commands.wazoctl:WazoCtlCommand',
         ]
     },
