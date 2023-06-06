@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright 2021-2022 The Wazo Authors  (see the AUTHORS file)
+# Copyright 2021-2023 The Wazo Authors  (see the AUTHORS file)
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from setuptools import setup, find_packages
@@ -14,18 +14,16 @@ setup(
     packages=find_packages(),
     entry_points={
         'wazo_sysconfd_client.commands': [
-            'commonconf_apply = wazo_sysconfd_client.commands.commonconf:CommonConfApplyCommand',
-            'commonconf_generate = wazo_sysconfd_client.commands.commonconf:CommonConfGenerateCommand',
-            'delete_voicemail = wazo_sysconfd_client.commands.voicemail:DeleteVoicemailCommand',
-            'dhcpd_update = wazo_sysconfd_client.commands.dhcpd_update:DhcpdUpdateCommand',
+            'commonconf = wazo_sysconfd_client.commands.commonconf:CommonConfCommand',
+            'dhcpd = wazo_sysconfd_client.commands.dhcpd:DhcpdCommand',
             'exec_request_handlers = wazo_sysconfd_client.commands.exec_request_handlers:ExecRequestHandlersCommand',
-            'ha_config = wazo_sysconfd_client.commands.ha_config:HAConfigCommand',
+            'ha = wazo_sysconfd_client.commands.ha:HAConfigCommand',
             'hosts = wazo_sysconfd_client.commands.hosts:HostsCommand',
-            'move_voicemail = wazo_sysconfd_client.commands.voicemail:MoveVoicemailCommand',
             'resolv_conf = wazo_sysconfd_client.commands.resolv_conf:ResolvConfCommand',
             'services = wazo_sysconfd_client.commands.services:ServicesCommand',
             'status = wazo_sysconfd_client.commands.status:StatusCommand',
-            'xivoctl = wazo_sysconfd_client.commands.xivoctl:XivoCtlCommand',
+            'voicemail = wazo_sysconfd_client.commands.voicemail:VoicemailCommand',
+            'wazoctl = wazo_sysconfd_client.commands.wazoctl:WazoCtlCommand',
         ]
     },
 )
