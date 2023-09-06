@@ -17,6 +17,7 @@ setup(
             'commonconf_apply = wazo_sysconfd_client.commands.commonconf:CommonConfApplyCommand',
             'commonconf_generate = wazo_sysconfd_client.commands.commonconf:CommonConfGenerateCommand',
             'delete_voicemail = wazo_sysconfd_client.commands.voicemail:DeleteVoicemailCommand',
+            'delete_voicemails_context = wazo_sysconfd_client.commands.voicemail:DeleteVoicemailsContextCommand',
             'dhcpd_update = wazo_sysconfd_client.commands.dhcpd_update:DhcpdUpdateCommand',
             'exec_request_handlers = wazo_sysconfd_client.commands.exec_request_handlers:ExecRequestHandlersCommand',
             'ha_config = wazo_sysconfd_client.commands.ha_config:HAConfigCommand',
