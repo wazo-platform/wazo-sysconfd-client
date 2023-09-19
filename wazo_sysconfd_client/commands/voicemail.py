@@ -37,3 +37,18 @@ class MoveVoicemailCommand(SysconfdCommand):
             self.raise_from_response(r)
 
         return r.json()
+
+
+class DeleteVoicemailsContextCommand(SysconfdCommand):
+    resource = 'voicemails_context'
+    headers = {'Accept': 'application/json'}
+
+    def __call__(self, context):
+        r = self.session.delete(
+            self.base_url, headers=self.headers, params={'context': context}
+        )
+
+        if r.status_code != 200:
+            self.raise_from_response(r)
+
+        return r.json()
