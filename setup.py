@@ -27,6 +27,7 @@ setup(
             'services = wazo_sysconfd_client.commands.services:ServicesCommand',
             'status = wazo_sysconfd_client.commands.status:StatusCommand',
             'xivoctl = wazo_sysconfd_client.commands.xivoctl:XivoCtlCommand',
+            'delete_moh = wazo_sysconfd_client.commands.moh:DeleteMohCommand',
         ]
     },
 )
