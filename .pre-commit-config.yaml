@@ -24,7 +24,7 @@ repos:
         args: [--filter-files]
 # See https://pre-commit.com for more information
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0/home/user/wazo/wazo-phoned/.pre-commit-config.yaml
+    rev: v4.5.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
