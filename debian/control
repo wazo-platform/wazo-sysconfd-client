@@ -1,6 +1,6 @@
 Source: wazo-sysconfd-client
 Section: python
-Priority: extra
+Priority: optional
 Maintainer: Wazo Maintainers <dev@wazo.community>
 Build-Depends:
  debhelper (>= 9),
